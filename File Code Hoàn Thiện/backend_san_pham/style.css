@@ -1,0 +1,424 @@
+
+.body, html {
+  height: 100%; /* Đảm bảo chiều cao của body và html luôn đầy đủ */
+}
+
+.brand-logo {
+  display: flex; /* Đảm bảo hình ảnh được căn chỉnh */
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  height: 100px; /* Chiều cao của khu vực logo */
+  padding: 0px; /* Khoảng cách xung quanh */
+}
+
+.brand-logo img {
+  max-width: 100%; /* Đảm bảo hình ảnh không vượt quá kích thước container */
+  max-height: 80px; /* Giới hạn chiều cao của hình ảnh */
+  object-fit: contain; /* Đảm bảo hình ảnh giữ nguyên tỉ lệ */
+}
+
+
+.order-management {
+    background-color: #fff;
+    padding: 0 35px 0 0;
+    overflow: hidden;
+  }
+  
+  .layout-container {
+    display: flex;
+    gap: 20px;
+  }
+  
+.sidebar {
+  width: 19%;
+  background-color: #f9f9f9;
+  border-right: 1px solid #d0d0d0;
+  padding: 15px 0;
+  font: 400 16px Montserrat, sans-serif;
+  color: #000;
+  display: flex; /* Kích hoạt Flexbox */
+  flex-direction: column; /* Đặt hướng cho Flexbox (nếu có nhiều phần tử) */
+  align-items: center; /* Căn giữa nội dung theo chiều ngang */
+}
+  
+  .sidebar-content {
+    padding: 0 29px;
+}
+
+a {
+  color: inherit; /* Giữ màu chữ giống với màu chữ cha */
+  text-decoration: none; /* Loại bỏ gạch chân nếu cần */
+}
+
+a:visited {
+  color: inherit; /* Đảm bảo màu không đổi khi link đã được truy cập */
+}
+
+a:hover, a:active {
+  color: inherit; /* Đảm bảo màu không đổi khi hover hoặc active */
+}
+
+
+  .nav-item {
+    display: flex;
+    gap: 26px;
+    padding: 13px 20px;
+    line-height: 1;
+    align-items: center;
+  }
+ 
+  .nav-item:hover{
+    background-color:  #ebebeb; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+.nav-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+  
+  .main-content {
+    width: 81%;
+    margin-left: 20px;
+    padding-top: 28px;
+  }
+
+  .header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+    
+    
+    .header-container {
+  display: flex;
+  flex-direction: column; /* Sắp xếp theo chiều dọc */
+  gap: 15px; /* Khoảng cách giữa các phần tử */
+  align-items: center; /* Căn giữa theo chiều ngang */
+  justify-content: center; /* Căn giữa theo chiều dọc */
+  text-align: center; /* Đảm bảo chữ trong header được căn giữa */
+}
+    
+    .page-title {
+    color: #484848;
+    text-align: center;
+    font: 700 33px Montserrat, sans-serif;
+  }
+    
+  .search-container {
+    display: flex;
+    gap: 15px;
+    padding: 20px;
+  }
+  
+  .search-form {
+    display: flex;
+    align-items: center;
+    border: 1px solid #000;
+    border-radius: 35px;
+    padding: 1px 7px; /* Giảm padding để dẹp thanh */
+    flex-grow: 1;
+    width: 500px;
+    height: 32px; /* Đặt chiều cao cụ thể */
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    height: 100%; /* Tự động khớp với chiều cao của form */
+}
+
+.search-button {
+    border: none;
+    background: none;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0 10px; /* Giảm padding */
+    border-left: 1px solid  #333;;
+    font-size: 13px;
+    font-family:Montserrat, sans-serif; ;
+    height: 100%; /* Khớp với chiều cao form */
+}
+
+.add-product-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Căn giữa nội dung theo chiều dọc */
+    width: auto;
+}
+
+.add-product-btn {
+    background-color: #891E00;
+    color: white;
+    border: none;
+    border-radius: 23px;
+    padding: 6px 15px; /* Giảm padding để dẹp lại */
+    cursor: pointer;
+    font-weight: 500;
+    font: 14px Montserrat, sans-serif;
+    height: 36px; /* Đặt chiều cao cụ thể */
+    width: 150px;
+}
+
+.product-container {
+  max-width: 95%; /* Giới hạn chiều rộng của container bảng */
+  margin: 0 auto; /* Căn giữa container */
+  overflow-x: auto; /* Thêm thanh cuộn ngang nếu nội dung quá lớn */
+  overflow-y: a; /* Ẩn thanh cuộn dọc nếu không cần thiết */
+  border: 1px solid #e0e0e0; /* Viền xung quanh bảng */
+}
+
+.product-table {
+  width: 100%; /* Bảng chiếm toàn bộ chiều rộng container */
+  border-collapse: collapse; /* Xóa khoảng cách giữa các ô */
+  border: 1px solid #e0e0e0;
+  text-align: center; /* Căn giữa nội dung trong bảng */
+}
+
+
+    .table-header {
+  background-color: #f9f9f9; /* Nền sáng cho header */
+  padding: 12px;
+  border-bottom: 3px solid #e0e0e0;
+  font-weight: 600;
+  white-space: nowrap; /* Giữ nội dung không bị xuống dòng */
+  text-align: left; /* Canh trái nội dung tiêu đề */
+  font: 700 18px Montserrat, sans-serif;
+    }
+    
+    .product-row {
+      font: 400 16px Montserrat, sans-serif;
+      color: #484848;
+      border-bottom: 1px solid #b8adad;
+    }
+
+    .product-row:hover {
+     background-color:  #f1f1f1; /* Màu khi hover */
+    }
+    .product-cell {
+      padding: 15px;
+      vertical-align: middle;
+    }
+    td {
+      text-align: left;
+      padding-left: 20px; /* khoảng cách từ lề trái */
+  }
+    .product-image {
+      width: 51px;
+      height: 35px;
+      background: #d9d9d9;
+    }
+    
+    .action-button {
+      width: 24px;
+      height: 24px;
+      padding: 0;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .action-icon {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    
+    .scroll-container {
+  width: 300px; /* Đặt chiều rộng */
+  height: 200px; /* Đặt chiều cao */
+  overflow: auto; /* Hiển thị thanh cuộn khi cần */
+  border: 1px solid #d0d0d0; /* Đường viền tùy chọn */
+}
+.filter-icon {
+  padding: 1px;
+  cursor: pointer;
+}
+.filter-menu {
+    display: none; /* Ẩn menu mặc định */
+    position: absolute; /* Vị trí so với filter-icon */
+    background-color: white;
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Montserrat, sans-serif;
+  }
+  
+  .filter-menu label {
+    font: 14px Montserrat, sans-serif;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .suggestion-box {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    max-height: 300px;
+    overflow-y: auto;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    display: none;
+    font-size: 14px;
+    font-family: Montserrat, sans-serif;
+}
+
+/* Khi có gợi ý hoặc đề xuất, hiển thị hộp */
+.suggestion-box.show {
+    display: block;
+}
+
+/* Các mục trong hộp gợi ý và đề xuất */
+.suggestion-item, .product-item {
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.suggestion-item:hover, .product-item:hover {
+    background-color: #f0f0f0;
+}
+
+/* Đảm bảo các mục trong danh sách gợi ý không bị tràn */
+.suggestion-item, .product-item {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Sidebar mặc định (cho màn hình lớn) */
+.sidebar {
+  width: 250px;
+  transition: width 0.3s ease;
+}
+
+/* Màn hình có độ rộng tối đa là 768px (máy tính bảng, điện thoại lớn) */
+/* Responsive cho màn hình có chiều rộng tối đa 768px */
+@media (max-width: 991px) {
+  .product-section {
+    padding-right: 20px;
+  }
+  
+  .layout-container {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100%;
+    margin-top: 33px;
+    padding-bottom: 100px;
+  }
+  
+  .brand-logo {
+    font-size: 40px;
+  }
+  
+  .main-content {
+    width: 100%;
+    margin-left: 0;
+  }
+  
+  .form-section,
+  .side-section {
+    width: 100%;
+  }
+  
+  .submit-btn {
+    margin-top: 40px;
+  }
+}
+/* Responsive cho màn hình tối đa 768px */
+@media (max-width: 768px) {
+.product-section {
+  padding: 0 10px;
+}
+
+.layout-container {
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sidebar {
+  width: 100%;
+  padding: 15px 0;
+}
+
+.nav-container span {
+  text-align: center;
+
+}
+
+.main-content {
+  width: 100%;
+  margin-left: 0;
+}
+
+.form-section,
+.side-section {
+  width: 100%;
+}
+
+.form-input {
+  width: 100%;
+}
+
+.description-area {
+  height: 250px;
+}
+
+.submit-btn {
+  margin-top: 20px;
+  float: none;
+}
+
+.brand-logo img {
+  max-height: 60px;
+}
+}
+
+/* Responsive cho màn hình tối đa 425px */
+@media (max-width: 425px) {
+.product-section {
+  padding: 0 5px;
+}
+
+.nav-item {
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-input,
+.form-input-small {
+  width: 100%;
+}
+
+.description-area {
+  height: 200px;
+}
+
+.submit-btn {
+  width: 100%;
+  text-align: center;
+}
+
+.brand-logo img {
+  max-height: 50px;
+}
+
+.preview-image {
+  width: 100%;
+  height: auto;
+}
+}

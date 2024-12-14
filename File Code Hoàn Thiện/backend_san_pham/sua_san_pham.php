@@ -113,6 +113,7 @@ while ($row = $result_danh_muc->fetch_assoc()) {
               <div>
               <label for="product-image">Ảnh:</label>
               <input type="file" id="product-image" name="product_image" accept="image/*" style="display: none;">
+                  <input type="hidden" name="current_image" value="<?php echo htmlspecialchars($anh_minh_hoa); ?>">
               <button type="button" id="change-image-btn" class="custom-btn">Thay ảnh</button>
               <div id="preview-container">
                   <img id="current-preview" src="../anh/<?php echo htmlspecialchars($anh_minh_hoa); ?>" alt="Ảnh hiện tại" style="max-width: 200px;">

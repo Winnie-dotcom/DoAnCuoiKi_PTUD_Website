@@ -18,11 +18,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $description = $_POST['product_description'];
     $category = $_POST['category']; // Lấy giá trị danh mục đã chọn
 
-    // Xử lý upload ảnh
+   // Xử lý upload ảnh
     if (!empty($_FILES['product_image']['name'])) {
         $imageName = time() . '_' . $_FILES['product_image']['name'];
         move_uploaded_file($_FILES['product_image']['tmp_name'], "../anh/$imageName");
     } else {
+        // Lấy tên ảnh hiện tại từ input ẩn
         $imageName = $_POST['current_image'];
     }
 

@@ -1,0 +1,289 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  body {
+    background-color: #f9f9f9;
+    color: #484848;
+    line-height: 1.5;
+  }
+  
+  .cart-content {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Header Styling */
+  .cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #e0b4ae;
+    border-radius: 8px;
+  }
+  
+  .cart-title {
+    font-size: 30px;
+    font-weight:700;
+    color: #891E00;
+  }
+  .add-more {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 15px;
+    border: none;
+  }
+  a {
+    text-decoration: none;
+  }
+  .add-more svg {
+    color:#000;
+  }
+  .add-more:hover span {
+    color: #fff;
+  }
+  .add-more:hover svg {
+    color: #fff;
+  }
+  .add-more:hover  {
+    background-color: #891E00;
+  }
+  .add-more span {
+    color: #000;
+    font-weight: bold;
+  }
+    
+  .add-text {
+    color: #007BFF;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  /* Cart Items Layout */
+  .cart-layout {
+    display: flex;
+    flex-direction: row; /* Chuyển sang dạng hàng ngang */
+    gap: 20px;
+  }
+  
+  /* Items Column */
+  .items-column {
+    flex: 2; /* Chiếm 2 phần */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .items-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #891E00;
+    font-weight: bold;
+    padding-right: 10px;
+    align-items: center;
+    color: #fff;
+    border-radius: 10px;
+  }
+  .header-labels {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-weight: bold;
+    gap: 70px;
+    padding-left: 200px;
+  }
+.delete-all {
+    padding-right: 5px;
+    border: none;
+    background-color: #891E00;
+}
+  .items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+  
+  .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd; /* Tạo đường kẻ giữa các dòng */
+}
+
+.product-name {
+    flex: 2; /* Chia tỷ lệ lớn hơn để sản phẩm có không gian rộng */
+    text-align: left; /* Căn lề trái */
+}
+
+.price, .quantity, .total {
+    flex: 1; /* Các cột này chia đều không gian */
+    text-align: center; /* Căn lề giữa */
+    padding-right: 10px;
+}
+  
+  
+  .product-name {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .price {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .quantity-input {
+    font-size: 16px;
+    text-align: center;
+    width: 30px;
+  }
+  
+  .item-total {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .remove-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  .delete-all .remove-icon {
+    background-color: #fff; 
+    border-radius: 5px;
+  }
+  
+  /* Summary Section */
+  .summary-column {
+    flex: 1; /* Chiếm 1 phần */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-height: fit-content;
+  }
+  
+  .summary-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .summary-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .summary-labels {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+  }
+  
+  .summary-values {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+  }
+  
+  .checkout-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    color: #891E00;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 1px solid #891E00;
+  }
+  
+  .checkout-btn:hover {
+    background-color: #891E00;
+    color: #fff;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .cart-layout {
+        flex-direction: column; /* Quay lại dạng cột trên màn hình nhỏ */
+    }
+  
+    .summary-column {
+        margin-top: 20px;
+    }
+  }
+  @media (max-width: 425px) {
+    /* Đặt các phần item-list và summary-column vào một cột */
+    .cart-layout {
+        flex-direction: column; /* Chuyển từ hàng ngang sang cột */
+        width: 100%; /* Đảm bảo chiều rộng là 100% */
+    }
+
+    /* Các mục trong danh sách và phần tổng quan sẽ chiếm toàn bộ chiều rộng */
+    .items-column, .summary-column {
+        width: 100%; /* Đảm bảo các phần này chiếm toàn bộ chiều rộng */
+        margin-bottom: 20px; /* Khoảng cách giữa các phần */
+    }
+
+    .items-list {
+        gap: 10px; /* Giảm khoảng cách giữa các mục trong danh sách */
+    }
+
+    .summary-container {
+        gap: 15px; /* Giảm khoảng cách giữa các phần trong phần tổng quan */
+    }
+
+    .summary-column {
+        padding: 15px; /* Điều chỉnh lại khoảng cách padding */
+    }
+
+    .checkout-btn {
+        font-size: 20px; /* Giảm kích thước font cho nút thanh toán */
+        padding: 12px; /* Điều chỉnh padding cho nút */
+    }
+
+    /* Đảm bảo tiêu đề header không bị tràn */
+    .header-labels {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        font-weight: bold;
+        gap: 20px; /* Giảm khoảng cách giữa các mục để tránh tràn */
+        padding-left: 10px; /* Điều chỉnh padding để các mục nằm gọn hơn */
+        white-space: nowrap; /* Ngăn không cho nội dung bị xuống dòng */
+        overflow: hidden; /* Ẩn phần nội dung tràn ra ngoài */
+        text-overflow: ellipsis; /* Hiển thị dấu "..." nếu nội dung bị cắt */
+        font-size: 14px; /* Thêm cỡ chữ nhỏ hơn */
+    }
+
+    /* Điều chỉnh kích thước của các tiêu đề trong header */
+    .items-header {
+        font-size: 14px; /* Giảm kích thước font tiêu đề trong phần danh sách */
+    }
+
+    /* Điều chỉnh khung tổng thể */
+    .cart-content {
+        width: 100%; /* Đảm bảo tổng thể chiếm 100% chiều rộng */
+        margin: 10px auto; /* Điều chỉnh khoảng cách với viền */
+        padding: 10px; /* Thêm padding để không bị sát viền */
+    }
+}

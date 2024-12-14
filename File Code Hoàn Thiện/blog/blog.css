@@ -1,0 +1,458 @@
+* {
+  box-sizing: border-box;
+}
+
+.blog-container {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 40px 100px;
+}
+
+.content {
+  align-self: center;
+  display: flex;
+  max-width: 100%;
+  flex-direction: column;
+  min-height: 600px; /* Đặt chiều cao tối thiểu */
+  width: 100%; /* Đảm bảo chiếm toàn bộ chiều rộng */
+}
+
+.search-bar {
+  border-radius: 35px;
+  background-color: #fff;
+  align-self: center;
+  display: flex;
+  width: 553px;
+  max-width: 100%;
+  gap: 20px;
+  color: #484848;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 9px 39px 9px 14px;
+  font: 16px Montserrat, sans-serif;
+  border: 1px solid #000;
+}
+
+.search-text {
+  border: none;
+  outline: none;
+  width: 100%; /* Chiều rộng đầy đủ để câu dài không bị cắt */
+  font-size: 16px;
+  background-color: transparent; /* Nền trong suốt */
+  padding: 8px 10px;
+}
+
+.search-input-wrapper {
+  display: flex; 
+  flex-grow: 1; 
+}
+
+.search-button {
+  border: none;
+  background: none;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0 15px;
+  border-left: 1px solid #000;
+  font-size: 14px;
+}
+
+.page-title {
+  color: #484848;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 44px;
+    letter-spacing: 1.44px;
+    font-family: Montserrat, sans-serif;
+  }
+
+.featured-image {
+  border-radius: 15px;
+  background-color: #d9d9d9;
+  margin-top: 26px;
+  color: #000;
+  text-align: center;
+  padding: 192px 70px 150px;
+  font: 300 48px Montserrat, sans-serif;
+}
+
+.content-grid {
+  margin-top: 40px;
+}
+
+.grid-container {
+  gap: 50px;
+  display: flex;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 67%;
+}
+
+.no-results {
+  font-size: 18px;
+  color: #666;
+}
+
+.carousel {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+
+.carousel-image {
+  height: 100%;
+  object-fit: cover;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+}
+
+.carousel-image.active {
+  display: block;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.section-title {
+  color: #000;
+  align-self: start;
+  font: 400 35px/0.8 Montserrat, sans-serif;
+}
+
+.featured-image-large {
+  border-radius: 15px;
+  background-color: #d9d9d9;
+  display: flex;
+  margin-top: 27px;
+  width: 100%;
+  height: 437px;
+}
+
+.featured-image-large img {
+  border-radius: 15px;
+  cursor: pointer;
+  object-fit: cover;
+  height: 437px;
+  width: 100%;
+}
+
+.most-featured-post:hover .featured-image-large {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.most-featured-post:hover .post-title {
+  color: #891E00;
+}
+
+.most-featured-post:hover .post-date {
+  color: #891E00;
+}
+
+.post-title {
+  width: 100%;
+  color: #000;
+  margin: 15px 41px 0 0;
+  font: 400 28px/35px Montserrat, sans-serif;
+  cursor: pointer;
+}
+
+.post-date {
+  width: 100%;
+  color: #9a9a9a;
+  align-self: start;
+  margin-top: 21px;
+  font: 400 20px/2 Montserrat, sans-serif;
+  cursor: pointer;
+}
+
+.post-grid {
+  display: flex;
+  flex-wrap: wrap; /* Cho phép các phần tử xuống dòng nếu không đủ chỗ */
+  gap: 16px;
+}
+
+.post-grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  gap: 25px;
+}
+
+/* Đặt kích thước cho từng post-card */
+.post-card {
+  flex: 1 1 calc(50% - 16px); /* Chiều rộng 50% trừ đi khoảng cách giữa các bài */
+  box-sizing: border-box; /* Đảm bảo padding và border không vượt kích thước */
+  padding: 16px 0; /* Nội dung cách biên */
+}
+
+.post-card:hover img {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.post-card:hover .post-card-title {
+  color: #891E00;
+}
+
+.post-card:hover .post-card-date {
+  color: #891E00;
+}
+
+.post-image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.post-card-title {
+  font-size: 14px;
+  font-family: Montserrat, sans-serif;
+  font-weight: bold;
+  margin: 8px 0;
+  color: #333;
+  cursor: pointer;
+}
+
+.post-card-date {
+  font-size: 14px;
+  font-family: Montserrat, sans-serif;
+  color: #666;
+}
+
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 33%;
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  font-family: Montserrat, sans-serif;
+  color: #000;
+  font-weight: 400;
+  line-height: 24px;
+  margin: auto 1;
+}
+
+.sidebar-image {
+  border-radius: 10px;
+  background-color: #d9d9d9;
+  display: flex;
+  height: 300px;
+}
+
+.sidebar-image img {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: center 1px;
+}
+
+.sidebar-image-secondary img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: center -1px;
+}
+
+.sidebar-image-secondary {
+  border-radius: 10px;
+  background-color: #d9d9d9;
+  display: flex;
+  margin-top: 22px;
+  height: 207px;
+}
+
+.recent-posts {
+  display: flex;
+  margin-top: 22px;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.recent-posts-title {
+  font-size: 30px;
+}
+
+.recent-posts-list {
+  font-size: 15px;
+  margin-bottom: 10px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  cursor: pointer; /* Thêm con trỏ tay khi hover */
+}
+
+
+.divider-line {
+  height: 0.5px;
+    margin: 0;
+    background-color: #9a9a9a;
+  }
+
+.recent-post-title {
+  margin: 5px 0;
+}
+
+.recent-post-title:hover {
+  color: #891E00;
+  text-decoration: underline;
+}
+
+.title-large {
+  font-size: 30px;
+}
+
+
+/* CSS Responsive cho màn hình nhỏ hơn 768px */
+@media (max-width: 768px) {
+  .blog-container {
+    padding: 20px;
+  }
+
+  .content {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .content-grid {
+    margin-top: 20px;
+  }
+
+  .page-title {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .grid-container {
+    flex-direction: column;
+  }
+
+  .main-content, .sidebar {
+    width: 100%;
+  }
+
+  .featured-image-large {
+    height: 300px;
+    margin-top: 10px;
+  }
+
+  .featured-image-large img {
+    height: 300px;
+  }
+
+  .carousel {
+    height: 300px;
+  }
+
+  .section-title {
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .post-title {
+    font-size: 22px;
+    margin: 10px 0;
+  }
+
+  .post-date {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .sidebar-image-secondary img {
+    object-position: 0 -50px;
+  }
+}
+
+@media (max-width: 425px) {
+  .blog-container {
+    padding: 20px;
+  }
+
+  .content {
+    padding: 5px;
+  }
+
+  .content-grid {
+    margin-top: 10px;
+  }
+
+  .search-bar {
+    padding: 2px;
+    width: 300px;
+  }
+
+  .search-text {
+    font-size: 12px;
+  }
+
+  .search-button {
+    font-size: 10px;
+  }
+
+  .page-title {
+    font-size: 24px;
+    line-height: 1.1;
+  }
+
+  .featured-image-large {
+    height: 200px;
+    margin-top: 10px;
+  }
+
+  .featured-image-large img {
+    height: 200px;
+  }
+
+  .carousel {
+    height: 200px;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+  
+  .post-title {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+
+  .post-date {
+    font-size: 14px;
+  }
+
+  .grid-container {
+    gap: 10px;
+  }
+
+  .post-card-title {
+    font-size: 12px;
+    font-weight: lighter;
+  }
+  
+  .recent-posts-title {
+    font-size: 18px;
+  }
+
+  .recent-post-title {
+    font-size: 12px;
+  }
+  
+  .sidebar-image-secondary img {
+    object-position: 0;
+  }
+}

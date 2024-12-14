@@ -1,0 +1,361 @@
+/* Đặt cấu hình chung */
+.container_body {
+    margin: 0; /* Loại bỏ toàn bộ margin mặc định của body */
+    padding: 0; /* Loại bỏ toàn bộ padding mặc định của body */
+    box-sizing: border-box; /* Áp dụng box-sizing để tính toán chính xác kích thước phần tử */
+}
+
+.no-products-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; /* Adjust as needed */
+    text-align: center;
+    padding: 20px;
+}
+
+.no-products-message p {
+    font-size: 18px;
+    color: #555;
+}
+
+
+
+/* Banner */
+.banner {
+    margin: 0;
+    padding: 0;
+}
+
+.banner img {
+    width: 100%; /* Full chiều rộng */
+    height: auto; /* Chiều cao tự động */
+    display: block; /* Loại bỏ khoảng trống dưới ảnh */
+}
+
+/* Sản phẩm */
+
+.category-nav .danh_muc {
+    color: #555;
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.category-nav {
+    display: flex;
+    width: 100%;
+    color: #484848;
+    justify-content: center;
+    font: 600 16px Montserrat, sans-serif;
+}
+
+.category-nav .danh_muc:hover {
+    color: #d64444; /* Màu khi hover */
+}
+
+/* Màu đỏ cho danh mục được chọn */
+.category-nav .active-category {
+    color: #a52525; /* Màu của danh mục được chọn */
+    font-weight: bold; /* Tùy chọn, làm nổi bật thêm */
+}
+
+  
+  .product{
+    
+    padding:20px;
+  }
+
+.product-grid {
+    /* display: grid;
+    flex-wrap: wrap; /* Đảm bảo sản phẩm xuống hàng khi không đủ chỗ */
+    /* gap: 20px; /* Khoảng cách giữa các sản phẩm */
+    /* justify-content: flex-start; /* Căn trái nếu không đủ sản phẩm lấp đầy hàng */
+    /* padding: 20px 100px; */
+
+   
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        padding: 20px 100px;
+        box-sizing: border-box;
+        margin-bottom: 40px;
+
+  }
+
+  
+  
+  .product-container {
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden; /* Prevent content overflow */
+
+  }
+  
+  .product-image {
+    width: 100%; /* Hình ảnh chiếm toàn bộ chiều rộng container */
+    height: 200px; /* Chiều cao cố định */
+    object-fit: cover; /* Giữ hình ảnh không bị méo */
+    border-radius: 5px;
+    
+  }
+  
+  .product-info {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+    margin-top: 6px;
+    align-items: start;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .product-title {
+    font-weight: 500;
+    font-size: 16px;
+    white-space: nowrap; /* Không cho phép xuống dòng */
+    overflow: hidden; /* Ẩn phần nội dung bị tràn */
+    text-overflow: ellipsis; /* Hiển thị dấu "..." khi nội dung bị cắt */
+    width: 100%; /* Đảm bảo chiều rộng phù hợp container */
+    display: block; /* Đảm bảo là một block để thuộc tính width hoạt động */
+}
+  
+  .product-price {
+    color: #830808;
+    font-size: 17px;
+    line-height: 48px;
+  }
+  
+  .add-to-cart {
+    background: #fdd3c0;
+    display: flex;
+    width:calc(100% - 20px);
+    font-size: 15px;
+    color: #830808;
+    justify-content: center;
+    padding: 5px 4px;
+    border-radius: 15px;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-size: 16px;
+    border:none;
+  }
+  .add-to-cart:hover {
+    background-color:#fabb9e;
+}
+  /* Đảm bảo ô nhập và các đề xuất không bị che khuất */
+    .search-container {
+        width: 100%; /* Chiếm toàn bộ chiều rộng */
+        padding: 20px 16px; /* Khoảng cách trong */
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center; /* Căn giữa theo chiều ngang */
+        align-items: center; /* Căn giữa theo chiều dọc */
+    }
+
+
+
+  .search-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+    border-radius: 35px;
+    padding: 9px 17px;
+    width: 400px; /* Đặt chiều rộng cố định */
+    max-width: 90%; /* Giới hạn chiều rộng tối đa */
+    margin-top: 20px ; /* Căn giữa theo chiều ngang */
+
+    
+  }
+
+  .containner{
+    margin: 0 auto; 
+  
+  }
+  
+  .search-input {
+    border: none;
+    outline: none;
+    flex-grow: 1; /* Đảm bảo thanh nhập văn bản chiếm phần lớn */
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+  }
+
+  .search-button {
+    border: none;
+    background: none;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0 15px;
+    border-left: 1px solid #000;
+    font-size: 14px;
+  }
+  
+  .suggestion-box {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    max-height: 300px;
+    overflow-y: auto;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    display: none;
+    font-size: 14px;
+    font-family: Montserrat, sans-serif;
+}
+
+/* Khi có gợi ý hoặc đề xuất, hiển thị hộp */
+.suggestion-box.show {
+    display: block;
+}
+
+/* Các mục trong hộp gợi ý và đề xuất */
+.suggestion-item, .product-item {
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.suggestion-item:hover, .product-item:hover {
+    background-color: #f0f0f0;
+}
+
+/* Đảm bảo các mục trong danh sách gợi ý không bị tràn */
+.suggestion-item, .product-item {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .about-content {
+        grid-template-columns: 1fr; /* Cột đơn trên màn hình nhỏ */
+    }
+}
+
+@media (max-width: 425px) {
+
+    /* Product */
+    .search-container {
+        padding: 10px 8px; /* Adjust padding for smaller screens */
+    }
+
+    .search-form {
+        width: 100%; /* Make the search form take full width */
+        max-width: 100%; /* Ensure it doesn't exceed the container width */
+        padding: 5px 10px; /* Adjust padding for smaller screens */
+    }
+
+    .search-input {
+        font-size: 12px; /* Adjust font size for smaller screens */
+    }
+
+    .search-button {
+        font-size: 12px; /* Adjust font size for smaller screens */
+        padding: 0 10px; /* Adjust padding to fit within the form */
+    }
+
+    .suggestion-item, .product-item {
+        font-size: 12px; /* Adjust font size for smaller screens */
+        padding: 8px; /* Adjust padding for smaller screens */
+    }
+
+    .category-nav .danh_muc {
+        color: #555;
+        text-decoration: none;
+        padding: 9px 9px;
+        transition: color 0.3s ease;
+
+    }
+}
+
+    
+
+    
+
+/* Mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0 40px;
+        margin-bottom: 40px;
+    }
+
+    .danh_muc{
+        white-space: nowrap;
+        width: 80px;
+        display: flex;
+        flex-direction: row;
+        padding: 10px 10px;
+
+
+    }
+
+}
+
+@media (max-width: 425px) {
+    .product-grid {
+        display: grid; /* Dùng grid layout */
+        grid-template-columns: repeat(2, 1fr); /* 2 cột bằng nhau */
+        gap: 10px; /* Khoảng cách giữa các sản phẩm */
+        padding: 0 20px; /* Khoảng cách trong grid */
+        box-sizing: border-box; /* Tính cả padding vào kích thước grid */
+    }
+
+    .search-form {
+        width: 250px;}
+
+    .product-container {
+        width: 100%; /* Sản phẩm chiếm toàn bộ chiều rộng cột */
+        max-width: 100%; /* Đảm bảo không vượt quá khung */
+        padding: 10px; /* Khoảng cách bên trong container */
+        box-sizing: border-box; /* Bao gồm padding và border trong kích thước */
+        overflow: hidden; /* Không cho phép nội dung tràn ra */
+    }
+
+    .product-image {
+        width: 100%; /* Hình ảnh chiếm toàn bộ chiều rộng container */
+        height: auto; /* Tự động điều chỉnh chiều cao */
+        object-fit: cover; /* Không bị méo hình */
+    }
+
+    .product-title {
+        font-weight: 500;
+    font-size: 16px;
+    white-space: nowrap; /* Không cho phép xuống dòng */
+    overflow: hidden; /* Ẩn phần nội dung bị tràn */
+    text-overflow: ellipsis; /* Hiển thị dấu "..." khi nội dung bị cắt */
+    width: 100%; /* Chiều rộng đầy đủ của container */
+    display: block; /* Đảm bảo là một khối để width hoạt động */
+    text-align: center; /* Căn giữa văn bản */
+    }
+
+    .danh_muc{
+        white-space: nowrap;
+        width: 65px;
+        display: flex;
+        flex-direction: row;
+        padding: 0 10px;
+
+    }
+}

@@ -1,0 +1,186 @@
+/* Đặt cấu hình chung */
+body {
+    margin: 0; /* Loại bỏ toàn bộ margin mặc định của body */
+    padding: 0; /* Loại bỏ toàn bộ padding mặc định của body */
+    box-sizing: border-box; /* Áp dụng box-sizing để tính toán chính xác kích thước phần tử */
+}
+
+
+
+/* Banner */
+.banner {
+    margin: 0;
+    padding: 0;
+}
+
+.banner img {
+    width: 100%; /* Full chiều rộng */
+    height: auto; /* Chiều cao tự động */
+    display: block; /* Loại bỏ khoảng trống dưới ảnh */
+}
+
+/* hình featured */
+.featured-images {
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    background: #f1cfcf; /* Màu nền để phân biệt */
+}
+
+.image-row {
+    display: flex;
+    gap: 25px; /* Khoảng cách giữa các ảnh */
+}
+
+.featured-image {
+    flex: 1; /* Đảm bảo chia đều không gian giữa các ảnh */
+    border-radius: 13px;
+    overflow: hidden; /* Cắt phần thừa của ảnh nếu cần */
+}
+
+.featured-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ảnh luôn vừa với khung */
+    border-radius: 13px;
+}
+
+/* 4 phúc lợi khi đặt hàng BTJ*/
+  
+  .features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 26px 28px;
+  background: #fff;
+  text-align: center;
+}
+
+  .feature-title {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .feature-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .feature-icon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    width: 24px;
+  }
+  
+  .feature-title {
+    color: #000;
+    font-size: 19px;
+    font-weight: 500;
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+    height:25%;
+    text-align: center;
+  }
+  
+  .feature-description {
+    color: #a09b9b;
+    font-size: 15px;
+    font-weight: 400;
+    align-self: stretch;
+    margin-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    padding: 0 20px;
+  }
+  
+
+/* Giới thiệu */
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #f7f7f7; /* Màu nền nhẹ nhàng */
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Phần nội dung chiếm 2/3, hình ảnh chiếm 1/3 */
+    gap: 20px;
+    max-width: 1300px;
+    width: 100%; /* Sửa kích thước để luôn nằm trong vùng hiển thị */
+    background: #ffffff; /* Nền trắng cho phần nội dung */
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+    overflow: hidden;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.about-title {
+    color: #333333; /* Màu chữ đậm cho tiêu đề */
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.title-underline {
+    width: 70px;
+    height: 4px;
+    background-color: #c41d1d; /* Màu điểm nhấn */
+    margin-bottom: 20px;
+}
+
+.about-description {
+    color: #666666; /* Màu chữ nhẹ nhàng */
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color:#b11c1c; /* Màu chính */
+    color: #f1f1f1;;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 5px;
+    width:150px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    background-color: #b11c1c;; /* Màu khi hover */
+    font-weight: 700;
+    color:#fff8f8
+}
+
+.about-image {
+    width: 100%; /* Hình ảnh chiếm 100% chiều rộng của cột */
+    height: auto; /* Giữ nguyên tỷ lệ ảnh */
+    padding:0; /* Loại bỏ padding để hình ảnh không bị đẩy ra ngoài */
+    object-fit: cover; /* Đảm bảo ảnh vừa khít */
+}
+
+
+
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .about-content {
+        grid-template-columns: 1fr; /* Cột đơn trên màn hình nhỏ */
+    }
+}
+
+
+

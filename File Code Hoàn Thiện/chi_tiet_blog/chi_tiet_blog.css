@@ -1,0 +1,273 @@
+.blog-detail {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 40px 100px;
+}
+
+.content {
+  align-self: center;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.content-columns {
+  gap: 40px;
+  display: flex;
+  width: 100%;
+}
+.main-content {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 65%;
+}
+.article-content {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  overflow: hidden;
+  color: #000;
+  font: 300 18px/50px Montserrat, sans-serif;
+  text-align: justify;
+}
+
+.article-title {
+  color: #484848;
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 44px;
+  letter-spacing: 1.44px;
+}
+
+.image-container {
+  display: flex;
+  margin: 10px 0;
+  flex-direction: column;
+  text-align: center;
+}
+
+.article-image {
+  border-radius: 15px;
+}
+
+.image-caption {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  font-style:italic
+}
+
+.article-text {
+  font: 200 18px/50px Montserrat, sans-serif;
+  line-height: 25px;
+  margin: 10px 0;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 35%;
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+}
+
+/* Container của các ảnh */
+.banner-fade {
+  position: relative; /* Chiều rộng cố định */
+  height: 220px; /* Chiều cao cố định */
+}
+
+/* Ảnh trong slider */
+.banner-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover;
+  opacity: 0; /* Ẩn tất cả ảnh ban đầu */
+  transition: opacity 1s ease-in-out; /* Hiệu ứng fade */
+}
+
+/* Ảnh đang được hiển thị */
+.banner-img.active {
+  opacity: 1; /* Hiển thị ảnh */
+  z-index: 1; /* Đặt ảnh đang hiển thị lên trên cùng */
+  border-radius: 10px;
+}
+
+.featured-posts {
+  display: flex;
+  margin-top: 20px;
+  flex-direction: column;
+  font: 15px Montserrat, sans-serif;
+  cursor: pointer;
+}
+
+/* Mỗi bài viết trong Featured Posts */
+.post-card {
+  border-radius: 10px;
+  display: flex;
+  padding-bottom: 8px;
+  flex-direction: column;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.post-card:hover .featured-image {
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.post-card:hover .post-title {
+color: #891E00;
+}
+
+.post-card:hover .post-date {
+color: #891E00;
+}
+
+/* Tiêu đề bài viết */
+.post-title {
+  color: #000;
+  font-weight: 600;
+  line-height: 23px;
+}
+.post-date {
+  color: #9a9a9a;
+  font-weight: 400;
+  line-height: 1;
+  margin-top: 1px;
+}
+.recent-posts {
+  font-family: Montserrat, sans-serif;
+  color: #000;
+}
+
+.recent-posts-title {
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.recent-post-list {
+  font-size: 15px;
+}
+
+.recent-post-list p {
+  font-size: 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.divider-line {
+  height: 0.5px;
+  margin: 5px 0;
+  background-color: #9a9a9a;
+}
+
+.recent-post-title {
+  font-size: 15px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.recent-post-title:hover {
+  color: #891E00;
+  text-decoration: underline;
+}
+
+/* CSS Responsive cho màn hình nhỏ hơn 768px */
+@media (max-width: 768px) {
+  .blog-detail {
+    padding: 20px;
+  }
+
+  .content-columns {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .main-content, .sidebar {
+    width: 100%;
+  }
+
+  .article-title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .article-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .image-container {
+    margin: 10px 0;
+  }
+
+  .post-card {
+    margin-bottom: 15px;
+  }
+
+  .post-title {
+    font-size: 20px;
+  }
+
+  .recent-posts-title {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 425px) {
+  .blog-detail {
+    padding: 20px;
+  }
+
+  .content-columns {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .image-caption {
+    font-size: 10px;
+    margin: 0;
+  }
+
+  .article-title {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .article-text {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .article-image {
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  .post-card {
+    margin-bottom: 10px;
+  }
+
+  .post-title {
+    font-size: 18px;
+  }
+
+  .recent-posts-title {
+    font-size: 14px;
+  }
+
+  .recent-post-title  {
+    font-size: 12px;
+    font-weight: lighter;
+  }
+}
